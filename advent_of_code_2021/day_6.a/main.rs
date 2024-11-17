@@ -1,4 +1,4 @@
-use std::time::Instance;
+use std::time::Instant;
 fn fish_reproduction_cycle(fish_counts: &mut Vec<i32>) {
     let mut new_fish: Vec<i32> = vec![];
     for timer in fish_counts.iter_mut() {
@@ -13,7 +13,7 @@ fn fish_reproduction_cycle(fish_counts: &mut Vec<i32>) {
 }
 
 fn main() {
-    let start = Instance::now();
+    let start = Instant::now();
     let file = include_str!("./input.txt");
     let mut fish_timer: Vec<i32> = file
         .trim()
@@ -26,6 +26,6 @@ fn main() {
     }
     let fish_count_80_days = fish_timer.len();
     println!("{}", fish_count_80_days);
-    let end = Instance::now();
-    println!("{:?}", end.duration_since(start));
+    let end = start.elapsed();
+    println!("{:?}", end);
 }
