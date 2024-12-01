@@ -4,7 +4,7 @@ fn main() {
     let (mut vec1, mut vec2): (Vec<i32>, Vec<i32>) = file
         .lines()
         .filter_map(|line| {
-            let parts = line.split_whitespace();
+            let mut parts = line.split_whitespace();
             if let (Some(first), Some(second)) = (parts.next(), parts.next()) {
                 if let (Ok(num1), Ok(num2)) = (first.parse::<i32>(), second.parse::<i32>()) {
                     return Some((num1, num2));
