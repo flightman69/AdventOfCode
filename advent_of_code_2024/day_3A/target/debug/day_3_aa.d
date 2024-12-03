@@ -1,1 +1,0 @@
-/home/flightman/programming/AdventOfCode/advent_of_code_2024/day_3_aa/target/debug/day_3_aa: /home/flightman/programming/AdventOfCode/advent_of_code_2024/day_3_aa/src/input.txt /home/flightman/programming/AdventOfCode/advent_of_code_2024/day_3_aa/src/main.rs
